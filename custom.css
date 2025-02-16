@@ -1,0 +1,6 @@
+body {
+    background-color: #f4f4f4; /* Change the color */
+    background-image: url('/assets/images/background.jpg'); /* Add an image */
+    background-size: cover;
+    background-position: center;
+}
