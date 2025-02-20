@@ -1,15 +1,15 @@
 /* ---- Basic page styling ---- */
 body {
-  background-color: #fafafa; /* Light background */
+  background-color: #121212; /* Dark background */
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #333;
+  color: #eee;
   margin: 0;
   padding: 0;
 }
 
 /* ---- Header & footer ---- */
 header, footer {
-  background-color: #333;
+  background-color: #1f1f1f;
   color: #fafafa;
   padding: 1em;
 }
@@ -26,7 +26,8 @@ main {
   padding: 0 1em;
 }
 main h1, main h2, main h3, main h4 {
-  color: #0D3B66; /* A dark, contrasting color */
+  /* A brighter color than #0D3B66 for better visibility on dark background */
+  color: #77B7FF;
   margin-top: 1.5em;
 }
 main p {
@@ -36,40 +37,43 @@ main p {
 
 /* ---- Links ---- */
 a {
-  color: #065A60;
+  /* Choose a lighter variant for visibility */
+  color: #4CE0D2;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
-/* ---- Tables (if any) ---- */
+/* ---- Tables ---- */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 2em 0;
 }
+/* Darken border, use lighter text */
 table, th, td {
-  border: 1px solid #ccc;
+  border: 1px solid #444;
+  color: #eee;
 }
 th, td {
   padding: 0.6em;
   text-align: left;
 }
 th {
-  background-color: #f2f2f2;
+  background-color: #2f2f2f;
 }
 
-/* ---- Code blocks (if you have code cells) ---- */
+/* ---- Code blocks ---- */
 pre, code {
   font-family: "Source Code Pro", monospace;
-  background: #f8f8f8;
-  color: #444;
+  background: #2b2b2b; /* Dark background for code */
+  color: #ddd;         /* Lighter text */
 }
 pre {
   padding: 0.8em;
   overflow: auto;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #444;
   margin: 1em 0;
 }
 code {
@@ -79,7 +83,7 @@ code {
 
 /* ---- Custom highlighting for inline <span> or classes ---- */
 .highlight {
-  background-color: #ffe79b;
+  background-color: #ffe79b; /* Keep a noticeable highlight color */
 }
 
 /* ---- Customize images ---- */
