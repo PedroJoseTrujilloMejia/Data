@@ -3,54 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Bias</title>
+  <title>Bias (Dark Theme)</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
   <style type="text/css">
-    /* Force dark background on the whole page */
+    /*****************
+     * Basic Layout
+     *****************/
     body {
-      background-color: #121212 !important;
-      color: #EEE !important;     /* Light text for contrast */
+      background-color: #121212; /* Dark background */
+      color: #EEE;               /* Light text for contrast */
       margin: 0;
       padding: 0;
-      font-family: sans-serif;    /* If you prefer a custom font */
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #77B7FF; /* Soft bright color for headings */
+      margin: 1em 0 0.5em;
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #53c8fa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
 
-    /* Make sure code blocks have a dark background and easy-to-read text */
-    .highlight {
-      background: #1f1f1f !important; /* Or any dark shade you prefer */
-      color: #ccc !important;         /* Slightly lighter text vs. normal */
+    /*************************
+     * Code & Highlighting
+     *************************/
+    /* Container for code blocks */
+    pre, code {
+      background-color: #1f1f1f;
+      color: #ccc;
+      font-family: "Source Code Pro", monospace;
     }
     pre {
-      background-color: #1f1f1f !important;
-      color: #ccc !important;
-      line-height: 125%;
-      border: 1px solid #444;
       padding: 0.8em;
+      margin: 1em 0;
+      border: 1px solid #444;
       overflow: auto;
+      border-radius: 4px;
+    }
+    code {
+      padding: 2px 4px;
+      border-radius: 3px;
     }
 
-    /* (Optional) Keep your custom highlights for syntax classes: */
-    .highlight .hll { background-color: #333 !important; }
-    .highlight .c { color: #999; font-style: italic }
+    /* Syntax highlighting classes */
+    .highlight .hll { background-color: #333; }
+    .highlight { background: #1f1f1f; color: #ccc; }
+    .highlight .c { color: #999; font-style: italic; }
     .highlight .err { color: #f66; }
-    .highlight .k { color: #53c8fa; font-weight: bold }
-    .highlight .o { color: #fca503; font-weight: bold }
+    .highlight .k { color: #53c8fa; font-weight: bold; }
+    .highlight .o { color: #fca503; font-weight: bold; }
     .highlight .p { color: #ccc; }
-    .highlight .ch { color: #999; font-style: italic }
-    .highlight .cm { color: #999; font-style: italic }
-    .highlight .cp { color: #999; font-style: italic }
-    .highlight .cpf { color: #999; font-style: italic }
-    .highlight .c1 { color: #999; font-style: italic }
-    .highlight .cs { color: #999; font-style: italic }
-    .highlight .kc { color: #53c8fa; font-weight: bold }
-    .highlight .kd { color: #53c8fa; font-weight: bold }
-    .highlight .kn { color: #53c8fa; font-weight: bold }
-    .highlight .kp { color: #53c8fa; font-weight: bold }
-    .highlight .kr { color: #53c8fa; font-weight: bold }
-    .highlight .kt { color: #53c8fa; font-weight: bold }
+    .highlight .ch { color: #999; font-style: italic; }
+    .highlight .cm { color: #999; font-style: italic; }
+    .highlight .cp { color: #999; font-style: italic; }
+    .highlight .cpf { color: #999; font-style: italic; }
+    .highlight .c1 { color: #999; font-style: italic; }
+    .highlight .cs { color: #999; font-style: italic; }
+    .highlight .kc { color: #53c8fa; font-weight: bold; }
+    .highlight .kd { color: #53c8fa; font-weight: bold; }
+    .highlight .kn { color: #53c8fa; font-weight: bold; }
+    .highlight .kp { color: #53c8fa; font-weight: bold; }
+    .highlight .kr { color: #53c8fa; font-weight: bold; }
+    .highlight .kt { color: #53c8fa; font-weight: bold; }
     .highlight .m { color: #d19a66; }
     .highlight .s { color: #98c379; }
-    .highlight .ow { color: #fca503; font-weight: bold }
+    .highlight .ow { color: #fca503; font-weight: bold; }
     .highlight .pm { color: #ccc; }
     .highlight .w { color: #ccc; }
     .highlight .mb { color: #d19a66; }
@@ -73,108 +98,81 @@
     .highlight .ss { color: #98c379; }
     .highlight .il { color: #d19a66; }
 
+    /***************************
+     * Jupyter-like cell styling
+     ***************************/
+    /* Markdown cells */
+    div.text_cell_render {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #eee; /* Light text */
+      margin-bottom: 1em;
+    }
+    /* Code cells */
+    div.input_area {
+      background-color: #1f1f1f; 
+      border: 1px solid #444;
+      border-radius: 5px;
+      margin: 1em 0;
+      padding: 0.8em;
+    }
+    /* Outputs */
+    div.output_area pre {
+      background-color: #2f2f2f;
+      border-left: 4px solid #53c8fa; /* Blue border for output */
+      padding: 10px;
+      font-size: 14px;
+      color: #ccc;
+      margin: 0.5em 0;
+    }
+    /* Highlight selected cells */
+    div.selected {
+      border: 2px solid #ff7f0e !important; /* Orange highlight */
+    }
+
+    /**************************************
+     * Scrollbars & other small adjustments
+     **************************************/
+    /* Slightly thinner, dark-themed scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #222;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 4px;
+      border: 1px solid #222;
+    }
   </style>
 </head>
 <body>
-  <!-- Page content here -->
+
   <h1>Bias Notebook (Dark Theme)</h1>
-  <p>Example text on a dark background.</p>
+  <p>Example text on a dark background. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  <div class="text_cell_render">
+    <h2>A Markdown-like Cell</h2>
+    <p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="input_area">
+    <pre><code class="highlight">
+# This is a code cell
+print("Hello, dark world!")
+    </code></pre>
+  </div>
+
+  <div class="output_area">
+    <pre>Output:
+Hello, dark world!</pre>
+  </div>
+
 </body>
 </html>
 
-    
-/* Change background color */
-body {
-    background-color: #f4f4f4; /* Light gray background */
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
-
-/* Customize markdown text */
-div.text_cell_render {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #222;
-}
-
-/* Style code cells */
-div.input_area {
-    background-color: #ffffff; /* White code cell background */
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-/* Style output area */
-div.output_area pre {
-    background-color: #f8f8f8;
-    border-left: 4px solid #1f77b4; /* Blue border for output */
-    padding: 10px;
-    font-size: 14px;
-}
-
-/* Highlight selected cells */
-div.selected {
-    border: 2px solid #ff7f0e !important; /* Orange highlight for selected cell */
-}
-
-/* Change heading color */
-h1, h2, h3 {
-    color: #1f77b4; /* Blue headings */
-}
-
-  </style>
-<style type="text/css">
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Distributed under the terms of the Modified BSD License.
-|----------------------------------------------------------------------------*/
-
-/*
- * Mozilla scrollbar styling
- */
-
-/* use standard opaque scrollbars for most nodes */
-[data-jp-theme-scrollbars='true'] {
-  scrollbar-color: rgb(var(--jp-scrollbar-thumb-color))
-    var(--jp-scrollbar-background-color);
-}
-
-/* for code nodes, use a transparent style of scrollbar. These selectors
- * will match lower in the tree, and so will override the above */
-[data-jp-theme-scrollbars='true'] .CodeMirror-hscrollbar,
-[data-jp-theme-scrollbars='true'] .CodeMirror-vscrollbar {
-  scrollbar-color: rgba(var(--jp-scrollbar-thumb-color), 0.5) transparent;
-}
-
-/* tiny scrollbar */
-
-.jp-scrollbar-tiny {
-  scrollbar-color: rgba(var(--jp-scrollbar-thumb-color), 0.5) transparent;
-  scrollbar-width: thin;
-}
-
-/* tiny scrollbar */
-
-.jp-scrollbar-tiny::-webkit-scrollbar,
-.jp-scrollbar-tiny::-webkit-scrollbar-corner {
-  background-color: transparent;
-  height: 4px;
-  width: 4px;
-}
-
-.jp-scrollbar-tiny::-webkit-scrollbar-thumb {
-  background: rgba(var(--jp-scrollbar-thumb-color), 0.5);
-}
-
-.jp-scrollbar-tiny::-webkit-scrollbar-track:horizontal {
-  border-left: 0 solid transparent;
-  border-right: 0 solid transparent;
-}
-
-.jp-scrollbar-tiny::-webkit-scrollbar-track:vertical {
-  border-top: 0 solid transparent;
-  border-bottom: 0 solid transparent;
-}
 
 /*
  * Lumino
