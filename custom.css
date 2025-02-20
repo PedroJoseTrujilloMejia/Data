@@ -1,0 +1,91 @@
+/* ---- Basic page styling ---- */
+body {
+  background-color: #fafafa; /* Light background */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Header & footer ---- */
+header, footer {
+  background-color: #333;
+  color: #fafafa;
+  padding: 1em;
+}
+header h1,
+footer h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+/* ---- Main content area ---- */
+main {
+  margin: 2em auto;
+  max-width: 900px;
+  padding: 0 1em;
+}
+main h1, main h2, main h3, main h4 {
+  color: #0D3B66; /* A dark, contrasting color */
+  margin-top: 1.5em;
+}
+main p {
+  line-height: 1.6;
+  margin: 1em 0;
+}
+
+/* ---- Links ---- */
+a {
+  color: #065A60;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Tables (if any) ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+}
+table, th, td {
+  border: 1px solid #ccc;
+}
+th, td {
+  padding: 0.6em;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/* ---- Code blocks (if you have code cells) ---- */
+pre, code {
+  font-family: "Source Code Pro", monospace;
+  background: #f8f8f8;
+  color: #444;
+}
+pre {
+  padding: 0.8em;
+  overflow: auto;
+  border: 1px solid #e2e2e2;
+  margin: 1em 0;
+}
+code {
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* ---- Custom highlighting for inline <span> or classes ---- */
+.highlight {
+  background-color: #ffe79b;
+}
+
+/* ---- Customize images ---- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
