@@ -146,12 +146,111 @@
       border-radius: 4px;
       border: 1px solid #222;
     }
+
+    /*
+     * Lumino
+     */
+    .lm-ScrollBar[data-orientation='horizontal'] {
+      min-height: 16px;
+      max-height: 16px;
+      min-width: 45px;
+      border-top: 1px solid #333;
+      background-color: #222; /* Dark background for track container */
+    }
+
+    .lm-ScrollBar[data-orientation='vertical'] {
+      min-width: 16px;
+      max-width: 16px;
+      min-height: 45px;
+      border-left: 1px solid #333;
+      background-color: #222; /* Dark background for track container */
+    }
+
+    .lm-ScrollBar-button {
+      background-color: #444;
+      background-position: center center;
+      min-height: 15px;
+      max-height: 15px;
+      min-width: 15px;
+      max-width: 15px;
+      cursor: pointer;
+    }
+
+    .lm-ScrollBar-button:hover {
+      background-color: #555;
+    }
+
+    .lm-ScrollBar-button.lm-mod-active {
+      background-color: #666;
+    }
+
+    .lm-ScrollBar-track {
+      background: #222; /* Match the dark background */
+    }
+
+    .lm-ScrollBar-thumb {
+      background: #555;
+    }
+
+    .lm-ScrollBar-thumb:hover {
+      background: #666;
+    }
+
+    .lm-ScrollBar-thumb.lm-mod-active {
+      background: #777;
+    }
+
+    .lm-ScrollBar[data-orientation='horizontal'] .lm-ScrollBar-thumb {
+      height: 100%;
+      min-width: 15px;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    .lm-ScrollBar[data-orientation='vertical'] .lm-ScrollBar-thumb {
+      width: 100%;
+      min-height: 15px;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    .lm-ScrollBar[data-orientation='horizontal']
+    .lm-ScrollBar-button[data-action='decrement'] {
+      background-image: var(--jp-icon-caret-left);
+      background-size: 17px;
+    }
+
+    .lm-ScrollBar[data-orientation='horizontal']
+    .lm-ScrollBar-button[data-action='increment'] {
+      background-image: var(--jp-icon-caret-right);
+      background-size: 17px;
+    }
+
+    .lm-ScrollBar[data-orientation='vertical']
+    .lm-ScrollBar-button[data-action='decrement'] {
+      background-image: var(--jp-icon-caret-up);
+      background-size: 17px;
+    }
+
+    .lm-ScrollBar[data-orientation='vertical']
+    .lm-ScrollBar-button[data-action='increment'] {
+      background-image: var(--jp-icon-caret-down);
+      background-size: 17px;
+    }
+
+    /*
+     * Copyright (c) Jupyter Development Team.
+     * Distributed under the terms of the Modified BSD License.
+     */
   </style>
 </head>
 <body>
 
   <h1>Bias Notebook (Dark Theme)</h1>
-  <p>Example text on a dark background. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>
+    This is an example page showcasing a dark, sleek aesthetic.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </p>
 
   <div class="text_cell_render">
     <h2>A Markdown-like Cell</h2>
@@ -173,101 +272,6 @@ Hello, dark world!</pre>
 </body>
 </html>
 
-
-/*
- * Lumino
- */
-
-.lm-ScrollBar[data-orientation='horizontal'] {
-  min-height: 16px;
-  max-height: 16px;
-  min-width: 45px;
-  border-top: 1px solid #a0a0a0;
-}
-
-.lm-ScrollBar[data-orientation='vertical'] {
-  min-width: 16px;
-  max-width: 16px;
-  min-height: 45px;
-  border-left: 1px solid #a0a0a0;
-}
-
-.lm-ScrollBar-button {
-  background-color: #f0f0f0;
-  background-position: center center;
-  min-height: 15px;
-  max-height: 15px;
-  min-width: 15px;
-  max-width: 15px;
-}
-
-.lm-ScrollBar-button:hover {
-  background-color: #dadada;
-}
-
-.lm-ScrollBar-button.lm-mod-active {
-  background-color: #cdcdcd;
-}
-
-.lm-ScrollBar-track {
-  background: #f0f0f0;
-}
-
-.lm-ScrollBar-thumb {
-  background: #cdcdcd;
-}
-
-.lm-ScrollBar-thumb:hover {
-  background: #bababa;
-}
-
-.lm-ScrollBar-thumb.lm-mod-active {
-  background: #a0a0a0;
-}
-
-.lm-ScrollBar[data-orientation='horizontal'] .lm-ScrollBar-thumb {
-  height: 100%;
-  min-width: 15px;
-  border-left: 1px solid #a0a0a0;
-  border-right: 1px solid #a0a0a0;
-}
-
-.lm-ScrollBar[data-orientation='vertical'] .lm-ScrollBar-thumb {
-  width: 100%;
-  min-height: 15px;
-  border-top: 1px solid #a0a0a0;
-  border-bottom: 1px solid #a0a0a0;
-}
-
-.lm-ScrollBar[data-orientation='horizontal']
-  .lm-ScrollBar-button[data-action='decrement'] {
-  background-image: var(--jp-icon-caret-left);
-  background-size: 17px;
-}
-
-.lm-ScrollBar[data-orientation='horizontal']
-  .lm-ScrollBar-button[data-action='increment'] {
-  background-image: var(--jp-icon-caret-right);
-  background-size: 17px;
-}
-
-.lm-ScrollBar[data-orientation='vertical']
-  .lm-ScrollBar-button[data-action='decrement'] {
-  background-image: var(--jp-icon-caret-up);
-  background-size: 17px;
-}
-
-.lm-ScrollBar[data-orientation='vertical']
-  .lm-ScrollBar-button[data-action='increment'] {
-  background-image: var(--jp-icon-caret-down);
-  background-size: 17px;
-}
-
-/*
- * Copyright (c) Jupyter Development Team.
- * Distributed under the terms of the Modified BSD License.
- */
-
 /*-----------------------------------------------------------------------------
 | Copyright (c) Jupyter Development Team.
 | Copyright (c) 2014-2017, PhosphorJS Contributors
@@ -277,45 +281,42 @@ Hello, dark world!</pre>
 | The full license is in the file LICENSE, distributed with this software.
 |----------------------------------------------------------------------------*/
 
+/* 
+ * Basic Widget 
+ */
 .lm-Widget {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  /* Dark background & light text */
+  background-color: #1f1f1f;
+  color: #eee;
 }
-
 .lm-Widget.lm-mod-hidden {
   display: none !important;
 }
 
-/*
- * Copyright (c) Jupyter Development Team.
- * Distributed under the terms of the Modified BSD License.
+/* 
+ * Accordion Panel 
  */
-
 .lm-AccordionPanel[data-orientation='horizontal'] > .lm-AccordionPanel-title {
   /* Title is rotated for horizontal accordion panel using CSS */
   display: block;
   transform-origin: top left;
   transform: rotate(-90deg) translate(-100%);
+  /* Light text for consistency */
+  color: #eee;
 }
 
-/*
- * Copyright (c) Jupyter Development Team.
- * Distributed under the terms of the Modified BSD License.
+/* 
+ * Command Palette 
  */
-
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Copyright (c) 2014-2017, PhosphorJS Contributors
-|
-| Distributed under the terms of the BSD 3-Clause License.
-|
-| The full license is in the file LICENSE, distributed with this software.
-|----------------------------------------------------------------------------*/
-
 .lm-CommandPalette {
   display: flex;
   flex-direction: column;
+  /* Dark background & light text */
+  background-color: #222;
+  color: #eee;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -324,6 +325,10 @@ Hello, dark world!</pre>
 
 .lm-CommandPalette-search {
   flex: 0 0 auto;
+  /* Slightly lighter background for the search area */
+  background-color: #2f2f2f;
+  padding: 8px;
+  border-bottom: 1px solid #444;
 }
 
 .lm-CommandPalette-content {
@@ -333,38 +338,61 @@ Hello, dark world!</pre>
   min-height: 0;
   overflow: auto;
   list-style-type: none;
+  /* Dark background for content area */
+  background-color: #1f1f1f;
 }
 
 .lm-CommandPalette-header {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: bold;
+  color: #77B7FF; /* Subtle highlight for headers */
+  padding: 6px 8px;
+  border-bottom: 1px solid #444;
+  background-color: #2f2f2f;
 }
 
 .lm-CommandPalette-item {
   display: flex;
   flex-direction: row;
+  padding: 6px 8px;
+  cursor: pointer;
+  /* Hover effect */
+}
+.lm-CommandPalette-item:hover {
+  background-color: #333;
 }
 
 .lm-CommandPalette-itemIcon {
   flex: 0 0 auto;
+  margin-right: 6px;
+  color: #53c8fa; /* Icon highlight color */
 }
 
 .lm-CommandPalette-itemContent {
   flex: 1 1 auto;
   overflow: hidden;
+  color: #eee;
 }
 
 .lm-CommandPalette-itemShortcut {
   flex: 0 0 auto;
+  color: #ccc;
+  margin-left: 6px;
 }
 
 .lm-CommandPalette-itemLabel {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /* Inherit color for consistency */
+  color: inherit;
 }
 
+/* 
+ * Close Icon 
+ */
 .lm-close-icon {
   border: 1px solid transparent;
   background-color: transparent;
@@ -380,50 +408,52 @@ Hello, dark world!</pre>
   outline: 0;
   cursor: pointer;
 }
+.lm-close-icon:hover {
+  background-color: #333;
+}
 .lm-close-icon:after {
   content: 'X';
   display: block;
   width: 15px;
   height: 15px;
   text-align: center;
-  color: #000;
+  color: #eee; /* Light text for dark background */
   font-weight: normal;
   font-size: 12px;
   cursor: pointer;
 }
 
-/*
- * Copyright (c) Jupyter Development Team.
- * Distributed under the terms of the Modified BSD License.
+/* 
+ * Dock Panel 
  */
-
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Copyright (c) 2014-2017, PhosphorJS Contributors
-|
-| Distributed under the terms of the BSD 3-Clause License.
-|
-| The full license is in the file LICENSE, distributed with this software.
-|----------------------------------------------------------------------------*/
-
 .lm-DockPanel {
   z-index: 0;
+  background-color: #1f1f1f; /* Dark background */
+  color: #eee;
 }
 
 .lm-DockPanel-widget {
   z-index: 0;
+  background-color: inherit;
+  color: inherit;
 }
 
 .lm-DockPanel-tabBar {
   z-index: 1;
+  background-color: #2f2f2f;
+  border-bottom: 1px solid #444;
 }
 
 .lm-DockPanel-handle {
   z-index: 2;
+  background-color: #2f2f2f;
+  transition: background-color 0.2s ease;
 }
-
 .lm-DockPanel-handle.lm-mod-hidden {
   display: none !important;
+}
+.lm-DockPanel-handle:hover {
+  background-color: #3f3f3f;
 }
 
 .lm-DockPanel-handle:after {
@@ -459,25 +489,12 @@ Hello, dark world!</pre>
   z-index: 3;
   box-sizing: border-box;
   pointer-events: none;
+  border: 2px dashed #53c8fa; /* Visible overlay for docking */
 }
-
 .lm-DockPanel-overlay.lm-mod-hidden {
   display: none !important;
 }
-
-/*
- * Copyright (c) Jupyter Development Team.
- * Distributed under the terms of the Modified BSD License.
- */
-
-/*-----------------------------------------------------------------------------
-| Copyright (c) Jupyter Development Team.
-| Copyright (c) 2014-2017, PhosphorJS Contributors
-|
-| Distributed under the terms of the BSD 3-Clause License.
-|
-| The full license is in the file LICENSE, distributed with this software.
-|----------------------------------------------------------------------------*/
+*/
 
 .lm-Menu {
   z-index: 10000;
